@@ -17,12 +17,10 @@ Project 5
   * sudo snap install docker
 
 - how to build the container
-```
-
-```
+  * Create a Dockerfile that contains all resources neccessary to build the image and run it as a container. Once the Dockerile has been created, the "docker build" command is used to build the docker image. FOr this project, I named the image "apache_image" and tagged it with "1.0". Once the image was built, I confirmed it was successful by running the "docker images" command.
 - how to run the container
-```
-```
+  * docker run --name myapache -d -p 80:80 apache_image:1.0
+  * Open browser and type "localhost:"
 - how to view the project running in the container (open a browser...go to ip and port...)
 ```
 ```

@@ -11,10 +11,10 @@ Project 5
 # Run Project Locally
 
 - how you installed docker + dependencies (WSL2, for example)
-* sudo apt-get remove docker docker-engine docker.io
-* sudo apt-get update
-* sudo apt install docker.io
-* sudo snap install docker
+  * sudo apt-get remove docker docker-engine docker.io
+  * sudo apt-get update
+  * sudo apt install docker.io
+  * sudo snap install docker
 
 - how to build the container
 ```

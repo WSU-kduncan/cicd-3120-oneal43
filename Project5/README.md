@@ -11,19 +11,22 @@ Project 5
 # Run Project Locally
 
 - how you installed docker + dependencies (WSL2, for example)
-  * sudo apt-get remove docker docker-engine docker.io
-  * sudo apt-get update
-  * sudo apt install docker.io
-  * sudo snap install docker
+  * sudo apt update
+  * sudo apt install apt-transport-https ca-certificates curl software-properties-common
+  * curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  * sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+  * apt-cache policy docker-ce
+  * sudo apt install docker-ce
+  * sudo systemctl status docker
+  * Resource: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 
 - how to build the container
-  * Create a Dockerfile that contains all resources neccessary to build the image and run it as a container. Once the Dockerile has been created, the "docker build" command is used to build the docker image. FOr this project, I named the image "apache_image" and tagged it with "1.0". Once the image was built, I confirmed it was successful by running the "docker images" command.
+  * Create a Dockerfile that contains all resources neccessary to build the image and run it as a container. Once the Dockerile has been created, the "docker build" command is used to build the docker image. For this project, I named the image "my-apache2". Once the image was built, I confirmed it was successful by running the "docker images" command.
+  * docker build -t my-apache2 .
 - how to run the container
-  * docker run --name myapache -d -p 80:80 apache_image:1.0
-  * Open browser and type "localhost:"
+  * docker run -dit --name my-running-app -p 8080:80 my-apache2
 - how to view the project running in the container (open a browser...go to ip and port...)
-```
-```
+  * Open browser and type http://localhost:8080 
 # DockerHub
 
 - Process to create public repo in DockerHub

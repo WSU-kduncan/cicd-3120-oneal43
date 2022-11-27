@@ -27,6 +27,7 @@ Project 5
   * docker run -dit --name my-running-app -p 8080:80 my-apache2
 - how to view the project running in the container (open a browser...go to ip and port...)
   * Open browser and type http://localhost:8080 
+  * Resource: https://hub.docker.com/_/httpd
 # DockerHub
 
 - Process to create public repo in DockerHub

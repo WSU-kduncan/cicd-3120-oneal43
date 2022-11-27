@@ -31,10 +31,24 @@ Project 5
 # DockerHub
 
 - Process to create public repo in DockerHub
+  * From your terminal:
+  * docker tag local-image:my-apache2 new-repo:ceg-3120-project5
+  #or
+  * Login to https://hub.docker.com/
+  * Click "Create a Repository"
+  * Name the repo "ceg-3120-project5"
+  * Give a diescription (optional)
+  * Ensure "Public" is selected so that the repo appears in Docker Hub search results
+  * CLick "Create"
 - How to authenticate with DockerHub via CLI using Dockerhub credentials
+  * $docker login or $sudo docker login depending on user permissions
+  * Enter username
+  * Enter password
   - what credentials would you recommend providing?
+    * Docker login credentials that were created on https://hub.docker.com/
 - How to push container to Dockerhub
-
+  * docker push new-repo:ceg-3120-project5
+  * Resources: https://business-science.github.io/shiny-production-with-aws-book/docker-hub.html
 # GitHub Actions
 
 - Configuring GitHub Secrets

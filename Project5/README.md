@@ -22,9 +22,9 @@ Project 5
 
 - how to build the container
   * Create a Dockerfile that contains all resources neccessary to build the image and run it as a container. Once the Dockerile has been created, the "docker build" command is used to build the docker image. For this project, I named the image "my-apache2". Once the image was built, I confirmed it was successful by running the "docker images" command.
-  * docker build -t my-apache2 .
+  * sudo docker build -t my-apache2 .
 - how to run the container
-  * docker run -dit --name my-running-app -p 8080:80 my-apache2
+  * sudo docker run -dit --name project5 -p 8080:80 my-apache2
 - how to view the project running in the container (open a browser...go to ip and port...)
   * Open browser and type http://localhost:8080 
   * Resource: https://hub.docker.com/_/httpd

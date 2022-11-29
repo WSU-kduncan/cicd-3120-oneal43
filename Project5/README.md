@@ -53,9 +53,14 @@ Project 5
 
 - Configuring GitHub Secrets
   - What secrets were set based on what info
+    * DOCKER_USERNAME
+    * DOCKER_PASSWORD
+    * DOCKER_REPO
 - Behavior of GitHub workflow
   - what does it do and when
+    * The wprkflow checcks the repo it is in, logs into docker, extratcts meta data, builds the image using my Dockerfile and pushes it to the repo on DockerHub.
   - what variables in workflow are custom to your project
+    * None
 
 # Deployment
 

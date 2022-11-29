@@ -32,7 +32,7 @@ Project 5
 
 - Process to create public repo in DockerHub
   * From your terminal:
-  * docker tag local-image:my_apache2 new-repo:project5
+  * docker tag my_apache2:latest oneal43/project5:mysite
   #or
   * Login to https://hub.docker.com/
   * Click "Create a Repository"
@@ -47,7 +47,7 @@ Project 5
   - what credentials would you recommend providing?
     * Docker login credentials that were created on https://hub.docker.com/
 - How to push container to Dockerhub
-  * docker push new-repo:project5
+  * docker push oneal43/project5:mysite
   * Resources: https://business-science.github.io/shiny-production-with-aws-book/docker-hub.html
 # GitHub Actions
 

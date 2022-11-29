@@ -5,9 +5,6 @@ on:
     branches: [master]
     tags:
       - 'v*.*'
-
-env:
-  DOCKER_REPO: ${{ secrets.DOCKER_REPO }}
 jobs:
   docker-build-push:
     runs-on: ubuntu-latest
@@ -25,7 +22,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_REPO }}
+          images: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}
           flavor: |
             latest=auto
           tags: |
@@ -35,7 +32,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: 
+          file: ./Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:latest

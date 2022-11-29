@@ -22,9 +22,9 @@ Project 5
 
 - how to build the container
   * Create a Dockerfile that contains all resources neccessary to build the image and run it as a container. Once the Dockerile has been created, the "docker build" command is used to build the docker image. For this project, I named the image "my-apache2". Once the image was built, I confirmed it was successful by running the "docker images" command.
-  * sudo docker build -t my-apache2 .
+  * sudo docker build -t my_apache2 .
 - how to run the container
-  * sudo docker run -dit --name project5 -p 8080:80 my-apache2
+  * sudo docker run -dit --name mysite -p 8080:80 my_apache2
 - how to view the project running in the container (open a browser...go to ip and port...)
   * Open browser and type http://localhost:8080 
   * Resource: https://hub.docker.com/_/httpd
@@ -32,11 +32,11 @@ Project 5
 
 - Process to create public repo in DockerHub
   * From your terminal:
-  * docker tag local-image:my-apache2 new-repo:ceg-3120-project5
+  * docker tag local-image:my_apache2 new-repo:project5
   #or
   * Login to https://hub.docker.com/
   * Click "Create a Repository"
-  * Name the repo "ceg-3120-project5"
+  * Name the repo "project5"
   * Give a diescription (optional)
   * Ensure "Public" is selected so that the repo appears in Docker Hub search results
   * CLick "Create"
@@ -47,7 +47,7 @@ Project 5
   - what credentials would you recommend providing?
     * Docker login credentials that were created on https://hub.docker.com/
 - How to push container to Dockerhub
-  * docker push new-repo:ceg-3120-project5
+  * docker push new-repo:project5
   * Resources: https://business-science.github.io/shiny-production-with-aws-book/docker-hub.html
 # GitHub Actions
 

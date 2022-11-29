@@ -7,8 +7,7 @@ on:
       - 'v*.*'
 
 env:
-  DOCKER_REPO: oneal43/project5
-
+  DOCKER_REPO: {{ secrets.DOCKER_REPO }}
 jobs:
   docker-build-push:
     runs-on: ubuntu-latest

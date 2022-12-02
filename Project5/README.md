@@ -67,8 +67,6 @@ Project 5
 - Description of container restart script
 -   * The restart script stops the old site, lists running containers, removes the old site container, lists containers, pulls the latest images from Dockerhub, lists images, then runs the image and binds it to port 80
 - Setting up a webhook on the server
-  - How you created you own listener
-     *
   - How you installed the [webhook on GitHub](https://github.com/adnanh/webhook)
      * export PATH=$PATH:/usr/local/go/bin
      * wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
@@ -78,8 +76,7 @@ Project 5
      * go build github.com/adnanh/webhook
   - How to keep the webhook running if the instance is on
      * Create webhook on docker hub that when an image is pushed, it opens port 9000.
-- Description of Webhook task definition file
-   * 
 - Steps to set up a notifier in GitHub or DockerHub
-   *
+   * Settings > Webhooks > add webhook
+   * Set Payload URL, COntent type, and secret. Selects events you would like to trigger the notification then cliekc add webhook
 

@@ -70,9 +70,14 @@ Project 5
   - How you created you own listener
      *
   - How you installed the [webhook on GitHub](https://github.com/adnanh/webhook)
-     * 
+     * export PATH=$PATH:/usr/local/go/bin
+     * wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
+     * sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz
+     * PATH="$PATH:/usr/local/go/bin"
+     * go install github.com/adnanh/webhook
+     * go build github.com/adnanh/webhook
   - How to keep the webhook running if the instance is on
-     * 
+     * Create webhook on docker hub that when an image is pushed, it opens port 9000.
 - Description of Webhook task definition file
    * 
 - Steps to set up a notifier in GitHub or DockerHub

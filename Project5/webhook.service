@@ -1,0 +1,7 @@
+[Unit]
+Description=Webhook service in go
+After=multi-user.target
+
+[Service]
+ExecStart=/home/ubuntu/go/bin/webhook -hooks /home/ubuntu/hooks.json
+Type=simple
